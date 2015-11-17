@@ -78,6 +78,8 @@ Now browse to the app at `http://localhost:8000/app/index.html`.
 
 ## Directory Layout
 
+### Depricated
+
 ```
 app/                    --> all of the source files for the application
   app.css               --> default stylesheet
@@ -105,6 +107,81 @@ e2e-tests/            --> end-to-end tests
   protractor-conf.js    --> Protractor config file
   scenarios.js          --> end-to-end scenarios to be run by Protractor
 ```
+
+### New layout
+
+The `src/` directory contains all code used in the application along with all
+tests of such code.
+
+```
+src/
+  |- app/ 
+  |  |- about/
+  |  |- home/
+  |  |- app.js
+  |  |- app.spec.js
+  |- assets/ 
+  |- common/ 
+  |  |- plusOne/
+  |- less/
+  |  |- main.less
+  |  |- variables.less
+  |- index.html
+
+src/
+├── app
+│   ├── app.css
+│   ├── app.module.js
+│   ├── common
+│   │   └── sidebar
+│   ├── components
+│   │   ├── home
+│   │   ├── article
+│   │   └── version
+│   │       ├── interpolate-filter.js
+│   │       ├── interpolate-filter_test.js
+│   │       ├── version-directive.js
+│   │       ├── version-directive_test.js
+│   │       ├── version.js
+│   │       └── version_test.js
+│   └── core
+│       ├── footer
+│       └── header
+├── assets
+│   ├── css
+│   ├── data
+│   ├── fonts
+│   ├── js
+│   └── libs
+├── index-async.html
+├── index.html
+├── less
+└── main.js
+
+```
+
+- `src/app/` - application-specific code, i.e. code not likely to be reused in
+  another application. [Read more &raquo;](app/README.md)
+- `src/app/common` - acts as reusable components or partials of our site
+- `src/app/components` - components or partials of our site
+- `src/app/core` - components or partials of our site
+- `src/assets/` - static files like fonts and images. 
+  [Read more &raquo;](assets/README.md)
+- `src/assets/libs` - third-party libraries or components likely to be reused in
+  another application. [Read more &raquo;](assets/libs/README.md)
+- `src/less/` - LESS CSS files. [Read more &raquo;](less/README.md)
+- `src/index.html` - this is the HTML document of the single-page application.
+  See below.
+
+See each directory for a detailed explanation.
+
+## `index.html`
+
+The `index.html` file is the HTML document of the single-page application (SPA)
+that should contain all markup that applies to everything in the app, such as 
+the header and footer. It declares with `ngApp` that this is `ngBoilerplate`,
+specifies the main `AppCtrl` controller, and contains the `ngView` directive
+into which route templates are placed. 
 
 ## Testing
 
