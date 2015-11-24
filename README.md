@@ -128,6 +128,8 @@ src/
   |  |- variables.less
   |- index.html
 
+I'm using this. 
+
 src/
 ├── app
 │   ├── app.css
@@ -162,13 +164,13 @@ src/
 
 - `src/app/` - application-specific code, i.e. code not likely to be reused in
   another application. [Read more &raquo;](app/README.md)
-- `src/app/common` - acts as reusable components or partials of our site
-- `src/app/components` - components or partials of our site
+- `src/app/common` - acts as reusable components or partials of many site
+- `src/app/components` - specific components or partials of this site
 - `src/app/core` - components or partials of our site
 - `src/assets/` - static files like fonts and images. 
   [Read more &raquo;](assets/README.md)
 - `src/assets/libs` - third-party libraries or components likely to be reused in
-  another application. [Read more &raquo;](assets/libs/README.md)
+  another application. This path is set in .bowerrc. [Read more &raquo;](assets/libs/README.md)
 - `src/less/` - LESS CSS files. [Read more &raquo;](less/README.md)
 - `src/index.html` - this is the HTML document of the single-page application.
   See below.
