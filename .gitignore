@@ -3,6 +3,6 @@ logs/*
 node_modules/
 bower_components/
 tmp
-assets/libs/*
+*/assets/libs/*
 .DS_Store
 .idea
