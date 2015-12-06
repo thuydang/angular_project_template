@@ -177,6 +177,11 @@ src/
 
 See each directory for a detailed explanation.
 
+## `Framework`
+AngularAMD
+ocLazyLoad
+
+
 ## `index.html`
 
 The `index.html` file is the HTML document of the single-page application (SPA)
