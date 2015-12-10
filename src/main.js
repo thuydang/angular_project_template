@@ -20,6 +20,7 @@ require.config({
     'angular-animate' : 'assets/libs/angular-animate/angular-animate.min',
     'angular-aria' : 'assets/libs/angular-aria/angular-aria.min',
     'angular-material' : 'assets/libs/angular-material/angular-material.min',
+		'angular-material-icons' : 'assets/libs/angular-material-icons/angular-material-icons.min',
   },
   shim : {
     'angularAMD' : ['angular'],
@@ -55,6 +56,10 @@ require.config({
 			deps: ['angular', 'angular-animate', 'angular-aria'],
       exports: 'ngMaterial'
 		},
+    'angular-material-icons': {
+      exports: "ngMdIcons",
+      deps: [ "angular" ]
+		}
 
 	},
 	// comment out when use bootstrap.js
