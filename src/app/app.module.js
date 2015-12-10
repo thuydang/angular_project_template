@@ -41,7 +41,7 @@ define(module, function(ng) {
 	app.config(function ($stateProvider, $urlRouterProvider,  $ocLazyLoadProvider, $translateProvider, cssInjectorProvider) {
 
 		// Route Settings
-		$urlRouterProvider.otherwise("/home"); // set the default route
+		$urlRouterProvider.otherwise("/"); // set the default route
 
 		cssInjectorProvider.setSinglePageMode(true); // remove all added CSS files when the page change
 

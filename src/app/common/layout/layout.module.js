@@ -7,8 +7,10 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 		$stateProvider.state('main', {
 			url: '/',
 			views : {
+				// ui-view="" can be referred as '@': here 
+				// ('""@"", 'empty view'@'empty state')
 				'mainContent@' : {
-					controller: 'AppCtrl',
+					//controller: 'AppCtrl',
 					templateUrl : 'app/common/layout/index.tpl.html'
 				},
 				/*
@@ -23,6 +25,18 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 					 template : ContentHelperProvider.getViews()
 					 }
 					 */
+				'header@main' : {
+				//navigation
+					templateUrl : 'app/core/header/header.tpl.html'
+					//controller: 'NavCtrl'
+				},
+				'content@main' : {
+					template : 'this is content'
+				},
+				'footer@main' : {
+					templateUrl : 'app/core/footer/footer.tpl.html'
+				}
+
 			},
 			resolve: {
 				loadCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
