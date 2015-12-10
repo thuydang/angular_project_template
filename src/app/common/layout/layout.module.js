@@ -10,7 +10,7 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 				// ui-view="" can be referred as '@': here 
 				// ('""@"", 'empty view'@'empty state')
 				'mainContent@' : {
-					//controller: 'AppCtrl',
+					controller: 'AppCtrl',
 					templateUrl : 'app/common/layout/index.tpl.html'
 				},
 				/*

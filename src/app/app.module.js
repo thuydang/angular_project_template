@@ -6,6 +6,7 @@ var module = [
   'angular-ui-router',
   'ocLazyLoad',
   'angular-css-injector',
+  'angular-material',
   //'app/node/nodes.module',
   //'common/login/login.module',
   //'common/navigation/navigation.module',
@@ -20,6 +21,8 @@ var e = [
   'oc.lazyLoad',
   'pascalprecht.translate',
   'angular.css.injector',
+  'ngAnimate',
+  'ngMaterial',
   //'app.nodes',
   //'app.topology',
 	//-- common --
