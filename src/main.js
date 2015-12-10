@@ -17,6 +17,8 @@ require.config({
     'jquery-ui' : 'assets/libs/jquery-ui/jquery-ui.min',
     'ocLazyLoad' : 'assets/libs/ocLazyLoad/dist/ocLazyLoad',
 		/// angular-material
+    'angular-messages' : 'assets/libs/angular-messages/angular-messages.min',
+    'angular-sanitize' : 'assets/libs/angular-sanitize/angular-sanitize.min',
     'angular-animate' : 'assets/libs/angular-animate/angular-animate.min',
     'angular-aria' : 'assets/libs/angular-aria/angular-aria.min',
     'angular-material' : 'assets/libs/angular-material/angular-material.min',
@@ -44,6 +46,14 @@ require.config({
     'underscore' : {
       exports : '_'
     },
+		'angular-messages' : {
+      exports: "ngMessages",
+      deps: [ "angular" ]
+		},
+		'angular-sanitize' : {
+      exports: "ngSanitize",
+      deps: [ "angular" ]
+		},
 		'angular-animate' : {
       exports: "ngAnimate",
       deps: [ "angular" ]
@@ -56,7 +66,7 @@ require.config({
 			deps: ['angular', 'angular-animate', 'angular-aria'],
       exports: 'ngMaterial'
 		},
-    'angular-material-icons': {
+		'angular-material-icons': {
       exports: "ngMdIcons",
       deps: [ "angular" ]
 		}
