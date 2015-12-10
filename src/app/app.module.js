@@ -14,8 +14,11 @@ var module = [
   //'common/login/login.module',
   //'common/navigation/navigation.module',
   //'common/topbar/topbar.module',
+  'app/common/config/env.module',
   'app/common/layout/layout.module',
-  'app/common/config/env.module'
+	//-- core --
+	'app/core/header/header.module'
+	//-- components --
 ]; //needed module
 
 // The name of all angularjs module
@@ -37,6 +40,7 @@ var e = [
   //'app.common.topbar',
   'app.common.layout',
 	//-- core --
+	//'app.core.header',
 	//-- components --
 ];
 //--------------------\\
@@ -51,7 +55,7 @@ define(module, function(ng) {
 				$translateProvider, cssInjectorProvider, $mdThemingProvider) {
 
 		// Route Settings
-		$urlRouterProvider.otherwise("/"); // set the default route
+		$urlRouterProvider.otherwise("/home"); // set the default route
 
 		cssInjectorProvider.setSinglePageMode(true); // remove all added CSS files when the page change
 
