@@ -6,6 +6,7 @@ require.config({
     'ngload' : 'assets/libs/angularAMD/ngload',
     'ui-bootstrap' : 'assets/libs/angular-bootstrap/ui-bootstrap-tpls.min',
     'domReady' : 'assets/libs/requirejs-domready/domReady',
+    'async' : 'assets/vendor/requirejs-async/async',
     'Restangular' : 'assets/libs/restangular/dist/restangular.min',
     'underscore' : 'assets/libs/underscore/underscore',
     'angular-ui-router' : 'assets/libs/angular-ui-router/release/angular-ui-router',
@@ -16,6 +17,8 @@ require.config({
     'jquery' : 'assets/libs/jquery/dist/jquery.min',
     'jquery-ui' : 'assets/libs/jquery-ui/jquery-ui.min',
     'ocLazyLoad' : 'assets/libs/ocLazyLoad/dist/ocLazyLoad',
+		/// google map
+		'angular-google-maps' : 'assets/libs/angular-google-maps/dist/angular-google-maps.min',
 		/// angular-material
     'angular-messages' : 'assets/libs/angular-messages/angular-messages.min',
     'angular-sanitize' : 'assets/libs/angular-sanitize/angular-sanitize.min',
@@ -34,6 +37,7 @@ require.config({
     'angular-cookies' : ['angular'],
     'angular-translate': ['angular'],
     'angular-translate-loader-static-files' : ['angular-translate'],
+    'angular-google-maps': ['angular'],
     'ngload' : ['angularAMD'],
     'jquery' : {
       exports : '$'

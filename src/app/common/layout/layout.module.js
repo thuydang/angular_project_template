@@ -34,11 +34,12 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 					 */
 				'header@main' : {
 				//navigation
-					templateUrl : 'app/core/header/header.tpl.html'
-					//controller: 'NavCtrl'
+					templateUrl : 'app/core/header/header.tpl.html',
+					controller: 'HeaderCtrl'
 				},
 				'sidenav@main' : {
-					templateUrl : 'app/common/sidebar/sidenav.tpl.html'
+					templateUrl : 'app/common/sidebar/sidenav.tpl.html',
+					controller: 'SidenavCtrl'
 				},
 				/*
 				'footer@main' : {
@@ -50,7 +51,11 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 				loadCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
 					return $ocLazyLoad.load({
 						//files: ['app/app.controller'].concat(TopBarHelperProvider.getControllers()).concat(NavHelperProvider.getControllers())
-						files: ['app/app.controller']
+						//name: 'app',
+						files: ['app/app.controller',
+							'app/core/header/header.controller',
+							'app/common/sidebar/sidenav.controller'
+						]
 					});
 				}]
 			}
@@ -67,7 +72,8 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 				},
 				*/
 				'content@main' : {
-					templateUrl : 'app/components/home/home.tpl.html'
+					templateUrl : 'app/components/home/home.tpl.html',
+					controller: 'GmapCtrl'
 				},
 				'footer@main' : {
 					template: 'footer added'
@@ -78,7 +84,11 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 				loadCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
 					return $ocLazyLoad.load({
 						//files: ['app/app.controller'].concat(TopBarHelperProvider.getControllers()).concat(NavHelperProvider.getControllers())
-						files: ['app/core/header/header.controller']
+						files: [
+							'app/core/header/header.controller',
+							'app/components/home/gmap.services',
+							'app/components/home/gmap.controller'
+						]
 					});
 				}]
 			}

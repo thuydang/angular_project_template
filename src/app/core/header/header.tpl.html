@@ -1,8 +1,16 @@
 <md-toolbar layout="row" >
-	<md-button class="menu" hide-gt-sm ng-click="toggleList()" aria-label="Show User List">
-Menu
-	</md-button>
-	<h1>Maxo36</h1>
-</md-toolbar>
+	<h4>Maxo36</h4>
+	<span flex></span>
+		<md-button ng-click="toggleRight()"
+		ng-hide="isOpenRight()"
+		aria-label="Show sidenav right"
+		class="md-primary">
+		<ng-md-icon icon="menu" style="fill:white" ></ng-md-icon>
+		<!--
+		<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+		Toggle right sidenav
+		-->
+		</md-button>
+	</md-toolbar>
 
 

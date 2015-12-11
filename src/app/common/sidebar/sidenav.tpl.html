@@ -1,24 +1,20 @@
 <!-- Sidenav -->
-		<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left">
-		<md-list>
-
-		<!-- List item #1 -->
-		<md-item>
-			<md-button>
-				<md-icon md-svg-src="./assets/svg/avatar-1.svg" class="avatar"></md-icon>
-				Lia Luogo
-			</md-button>
-		</md-item>
-
-		<!-- List item #2 -->
-		<md-item>
-			<md-button>
-				<md-icon md-svg-src="./assets/svg/avatar-4.svg" class="avatar"></md-icon>
-				Lawrence Ray
-			</md-button>
-		</md-item>
-
-		</md-list>
-		</md-sidenav>
-
-
+<div flex>
+<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="sidenav-right">
+<md-toolbar class="md-theme-light">
+<h1 class="md-toolbar-tools">Sidenav Right</h1>
+</md-toolbar>
+<md-content ng-controller="RightCtrl" layout-padding>
+<form>
+	<md-input-container>
+	<label for="testInput">Test input</label>
+	<input type="text" id="testInput"
+	ng-model="data" md-autofocus>
+	</md-input-container>
+</form>
+<md-button ng-click="close()" class="md-primary">
+Close Sidenav Right
+</md-button>
+</md-content>
+</md-sidenav>
+</div>

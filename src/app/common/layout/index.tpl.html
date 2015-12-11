@@ -5,18 +5,17 @@
 <nav class="navbar-default navbar-static-side menu-sidebar ng-scope" ui-view="navigation" role="navigation"></nav>
 -->
 
-<div  layout="column">
-
+<div layout="column">
 	<!-- Header: toolbar -->
-	<div ui-view="header"></div> 
+	<div ui-view="header" flex ></div> 
+	<div ui-view="sidenav" ></div> 
 	<!-- Page Content Wrapper -->
-	<div id="pageContent" layout="row">
-		<div ui-view="sidenav"></div> 
-		<div ui-view="content"></div> 
+	<div id="pageContent" layout="row" flex layout-wrap >
+		<div flex ui-view="content" layout-fill ></div> 
 	</div>
-<!-- Page Content Wrapper -->
-<div ui-view="footer"></div> 
-
-<!-- </ui-view> -->
-
+	<!-- Page Content Wrapper -->
+	<div flex>
+		<div ui-view="footer"></div> 
+	</div>
+	<!-- </ui-view> -->
 </div>

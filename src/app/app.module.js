@@ -10,6 +10,7 @@ var module = [
   'angular-sanitize',
   'angular-material',
 	'angular-material-icons',
+	'angular-google-maps',
   //'app/node/nodes.module',
   //'common/login/login.module',
   //'common/navigation/navigation.module',
