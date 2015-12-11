@@ -37,10 +37,10 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 					templateUrl : 'app/core/header/header.tpl.html'
 					//controller: 'NavCtrl'
 				},
-				/*
-				'page-content@main' : {
-					templateUrl : 'app/core/header/header.tpl.html'
+				'sidenav@main' : {
+					templateUrl : 'app/common/sidebar/sidenav.tpl.html'
 				},
+				/*
 				'footer@main' : {
 					templateUrl : 'app/core/footer/footer.tpl.html'
 				}
@@ -66,7 +66,7 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 					templateUrl : 'app/component/home/home.tpl.html'
 				},
 				*/
-				'pageContent@main' : {
+				'content@main' : {
 					templateUrl : 'app/components/home/home.tpl.html'
 				},
 				'footer@main' : {

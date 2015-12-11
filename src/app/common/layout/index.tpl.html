@@ -10,10 +10,13 @@
 	<!-- Header: toolbar -->
 	<div ui-view="header"></div> 
 	<!-- Page Content Wrapper -->
-	<div ui-view="pageContent"></div> 
-	<!-- Page Content Wrapper -->
-	<div ui-view="footer"></div> 
+	<div id="pageContent" layout="row">
+		<div ui-view="sidenav"></div> 
+		<div ui-view="content"></div> 
+	</div>
+<!-- Page Content Wrapper -->
+<div ui-view="footer"></div> 
 
-	</ui-view>
+<!-- </ui-view> -->
 
 </div>
