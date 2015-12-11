@@ -1,4 +1,4 @@
-define(['app/app.module', 'app/components/home/gmap.services'], function (app) {
+define(['app/app.module', 'app/components/home/google_map/gmap.services'], function (app) {
 	'use strict';
 //angular
 //  .module('app.common.sidebar', ['ngMaterial'])
