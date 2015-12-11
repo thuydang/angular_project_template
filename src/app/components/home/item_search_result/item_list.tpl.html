@@ -1,4 +1,15 @@
-<md-whiteframe class="md-whiteframe-1dp" layout layout-fill layout-align="center center">
-<span>.md-whiteframe-1dp</span>
-</md-whiteframe>
-
+<md-list>
+<md-subheader class="md-no-sticky">3 line item</md-subheader>
+<md-list-item class="md-3-line" ng-repeat="item in items">
+<div layout="row" >
+	<md-card class="card" flex="50">
+	<img ng-src="http://themestarz.net/html/spotter/assets/img/items/1.jpg" />
+	</md-card>
+	<div class="md-list-item-text" layout="column" flex="50">
+		<h3>{{ item.name }}</h3>
+		<h4>{{ item.address }}</h4>
+		<p>{{ item.rating }}</p>
+	</div>
+</div>
+</md-list-item>
+<md-divider ></md-divider>

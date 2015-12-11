@@ -76,7 +76,8 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 				},
 				/// inside content@main
 				'itemSearchResult@main.home' : {
-					templateUrl : 'app/components/home/item_search_result/item_list.tpl.html'
+					templateUrl : 'app/components/home/item_search_result/item_list.tpl.html',
+					controller: 'SearchResultCtrl'
 				},
 				'map@main.home' : {
 					templateUrl : 'app/components/home/google_map/map.tpl.html',
@@ -94,6 +95,7 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 						//files: ['app/app.controller'].concat(TopBarHelperProvider.getControllers()).concat(NavHelperProvider.getControllers())
 						files: [
 							'app/core/header/header.controller',
+							'app/components/home/item_search_result/search_result.controller',
 							'app/components/home/google_map/gmap.services',
 							'app/components/home/google_map/gmap.controller'
 						]
