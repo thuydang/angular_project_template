@@ -83,6 +83,11 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 					templateUrl : 'app/components/home/google_map/map.tpl.html',
 					controller: 'GmapCtrl'
 				},
+				/// Section
+				'features@main.home' : {
+					templateUrl : 'app/components/home/section_features/item_list.tpl.html',
+					controller: 'FeaturesCtrl'
+				},
 				///--
 				'footer@main' : {
 					template: 'footer added'
@@ -95,15 +100,60 @@ define(['angularAMD', 'angular-ui-router', 'ocLazyLoad'], function(ng) {
 						//files: ['app/app.controller'].concat(TopBarHelperProvider.getControllers()).concat(NavHelperProvider.getControllers())
 						files: [
 							'app/core/header/header.controller',
+							// top section
 							'app/components/home/item_search_result/search_result.controller',
 							'app/components/home/google_map/gmap.services',
-							'app/components/home/google_map/gmap.controller'
+							'app/components/home/google_map/gmap.controller',
+							// section feature
+							'app/components/home/section_features/features.controller'
 						]
 					});
 				}]
 			}
+		})
+		.state('main.shops', {
+			url: '/shops',
+			views : {
+				// ui-view="" can be referred as '@': here 
+				// ('""@"", 'empty view'@'empty state')
+				/*
+				'mainContent@' : {
+					controller: 'AppCtrl',
+					templateUrl : 'app/component/home/home.tpl.html'
+				},
+				*/
+				'content@main' : {
+					templateUrl : 'app/components/shops/shops.tpl.html'
+				},
+				/// inside content@main
+				/// Section
+				
+				/// Section
+				//'features@main.home' : {
+				//	templateUrl : 'app/components/home/section_features/item_list.tpl.html',
+				//	controller: 'FeaturesCtrl'
+				//},
+				///--
+				'footer@main' : {
+					template: 'footer added'
+				}
 
+			},
+			resolve: {
+				loadCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+					return $ocLazyLoad.load({
+						//files: ['app/app.controller'].concat(TopBarHelperProvider.getControllers()).concat(NavHelperProvider.getControllers())
+						files: [
+							'app/core/header/header.controller',
+							// top section
+							// section feature
+							//'app/components/shops/section_features/features.controller'
+						]
+					});
+				}]
+			}
 		});
+
 
 
 	});
